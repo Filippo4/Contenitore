@@ -1,0 +1,34 @@
+﻿<Window x:Class="Interfaccia.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Interfaccia"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0">
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <StackPanel Orientation="Vertical" Grid.Row="0" Grid.Column="0" Grid.RowSpan="2">
+                <Label Grid.Row="0" Grid.Column="0" Content="Crea il contenitore" HorizontalAlignment="Center" Padding="0,40,0,0"></Label>
+                <Button Grid.Column="0" Grid.Row="1" Content="Crea" Width="100" Height="20" HorizontalAlignment="Center"></Button>
+            </StackPanel>
+
+            <ListBox Grid.Row="0" Grid.Column="1" Width="500" Height="100" Grid.ColumnSpan="2"></ListBox>
+        </Grid>
+
+    </Grid>
+</Window>

@@ -5,13 +5,16 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Interfaccia"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Contenitore" Height="450" Width="800">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition></RowDefinition>
             <RowDefinition></RowDefinition>
             <RowDefinition></RowDefinition>
         </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+
+        </Grid.ColumnDefinitions>
 
         <Grid Grid.Row="0">
             <Grid.RowDefinitions>
@@ -24,11 +27,66 @@
             </Grid.ColumnDefinitions>
             <StackPanel Orientation="Vertical" Grid.Row="0" Grid.Column="0" Grid.RowSpan="2">
                 <Label Grid.Row="0" Grid.Column="0" Content="Crea il contenitore" HorizontalAlignment="Center" Padding="0,40,0,0"></Label>
-                <Button Grid.Column="0" Grid.Row="1" Content="Crea" Width="100" Height="20" HorizontalAlignment="Center"></Button>
+                <Button x:Name="btn_crea" BorderThickness="2" BorderBrush="Black" Grid.Column="0" Grid.Row="1" Content="Crea" Width="100" Height="20" HorizontalAlignment="Center"></Button>
             </StackPanel>
-
-            <ListBox Grid.Row="0" Grid.Column="1" Width="500" Height="100" Grid.ColumnSpan="2"></ListBox>
+            <ListBox BorderThickness="2" BorderBrush="Black" Grid.Row="0" Grid.Column="1" Width="500" Height="100" Grid.ColumnSpan="2"></ListBox>
         </Grid>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <ComboBox x:Name="cmb_contenitore" Grid.Column="0" Grid.Row="0" Width="150" Height="30" BorderThickness="3" BorderBrush="Black"></ComboBox>
+            <StackPanel Grid.Column="1" >
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="40"></RowDefinition>
+                        <RowDefinition Height="45"></RowDefinition>
+                        <RowDefinition Height="50"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Label Content="inserisci il parametro" Width="120" Padding="0,10,0,0"></Label>
+                    <TextBox x:Name="txt_parametro1" Grid.Row="1" Width="200" Height="30" BorderBrush="Black" BorderThickness="2"></TextBox>
+                    <TextBox x:Name="txt_parametro2" Grid.Row="2" Width="200" Height="30" BorderBrush="Black" BorderThickness="2"></TextBox>
+                </Grid>
+            </StackPanel>
+            <Button x:Name="brn_creafigura" BorderThickness="2" BorderBrush="Black" Grid.Column="2" Grid.Row="1" Content="Crea Figura" Width="100" Height="20" HorizontalAlignment="Center"></Button>
+        </Grid>
+        <Grid Grid.Row="2">
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <StackPanel Grid.Column="0">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="45"></RowDefinition>
+                        <RowDefinition ></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Label Content="Seleziona politica" Grid.Row="0" Grid.Column="0" Padding="75,20,0,0"></Label>
+                    <ComboBox Grid.Row="1" Width="180" Height="30" BorderBrush="Black" BorderThickness="3"></ComboBox>
+                </Grid>
+            </StackPanel>
+            <StackPanel Grid.Column="1">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="40"></RowDefinition>
+                        <RowDefinition Height="35"></RowDefinition>
+                        <RowDefinition Height="35"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Label Content="Inserisci il parametro " Grid.Row="0" Padding="75,10,0,0"></Label>
+                    <TextBox x:Name="txt_politica" Grid.Row="1" Height="25" Width="200" BorderBrush="Black" BorderThickness="2"></TextBox>
+                    <Button x:Name="btn_politica" Grid.Row="2" Height="25" Width="200" Content="Applica Politica"></Button>
+                </Grid>
 
+            </StackPanel>
+            <StackPanel Grid.Column="2" VerticalAlignment="Center">
+                <ListBox Grid.RowSpan="3" Grid.Column="2" x:Name="txt_risultato" BorderBrush="Black" BorderThickness="2" Height="100" Width="220"></ListBox>
+            </StackPanel>
+        </Grid>
     </Grid>
 </Window>

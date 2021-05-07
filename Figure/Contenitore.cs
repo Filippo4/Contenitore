@@ -37,5 +37,9 @@ namespace Figure
                 return figure;
             }
         }
+        public override string ToString()
+        {
+            return "Contenitore";
+        }
     }
 }

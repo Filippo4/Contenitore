@@ -27,9 +27,9 @@
             </Grid.ColumnDefinitions>
             <StackPanel Orientation="Vertical" Grid.Row="0" Grid.Column="0" Grid.RowSpan="2">
                 <Label Grid.Row="0" Grid.Column="0" Content="Crea il contenitore" HorizontalAlignment="Center" Padding="0,40,0,0"></Label>
-                <Button x:Name="btn_crea" BorderThickness="2" BorderBrush="Black" Grid.Column="0" Grid.Row="1" Content="Crea" Width="100" Height="20" HorizontalAlignment="Center"></Button>
+                <Button x:Name="btn_crea" BorderThickness="2" BorderBrush="Black" Grid.Column="0" Grid.Row="1" Content="Crea" Width="100" Height="20" HorizontalAlignment="Center" Click="btn_crea_Click"></Button>
             </StackPanel>
-            <ListBox BorderThickness="2" BorderBrush="Black" Grid.Row="0" Grid.Column="1" Width="500" Height="100" Grid.ColumnSpan="2"></ListBox>
+            <ListBox x:Name="lbx_Contenitori" BorderThickness="2" BorderBrush="Black" Grid.Row="0" Grid.Column="1" Width="500" Height="100" Grid.ColumnSpan="2"></ListBox>
         </Grid>
         <Grid Grid.Row="1">
             <Grid.ColumnDefinitions>
@@ -37,7 +37,7 @@
                 <ColumnDefinition></ColumnDefinition>
                 <ColumnDefinition></ColumnDefinition>
             </Grid.ColumnDefinitions>
-            <ComboBox x:Name="cmb_contenitore" Grid.Column="0" Grid.Row="0" Width="150" Height="30" BorderThickness="3" BorderBrush="Black"></ComboBox>
+            <ComboBox x:Name="cmb_contenitore" Grid.Column="0" Grid.Row="0" Width="150" Height="30" BorderThickness="3" BorderBrush="Black" SelectionChanged="cmb_contenitore_SelectionChanged" ></ComboBox>
             <StackPanel Grid.Column="1" >
                 <Grid>
                     <Grid.RowDefinitions>
@@ -68,7 +68,7 @@
                         <RowDefinition ></RowDefinition>
                     </Grid.RowDefinitions>
                     <Label Content="Seleziona politica" Grid.Row="0" Grid.Column="0" Padding="75,20,0,0"></Label>
-                    <ComboBox Grid.Row="1" Width="180" Height="30" BorderBrush="Black" BorderThickness="3"></ComboBox>
+                    <ComboBox x:Name="cmb_politica" Grid.Row="1" Width="180" Height="30" BorderBrush="Black" BorderThickness="3"></ComboBox>
                 </Grid>
             </StackPanel>
             <StackPanel Grid.Column="1">

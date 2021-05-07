@@ -15,12 +15,6 @@ namespace Politiche
         {
             this.soglia = soglia;
         }
-
-        /// <summary>
-        /// Seleziona la figura in base alla politica
-        /// </summary>
-        /// <param name="f">figura</param>
-        /// <returns>True se la figura è selezionata, False altrimenti</returns>
         public abstract bool Seleziona(FiguraGeometrica f);
     }
 }

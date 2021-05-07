@@ -94,5 +94,15 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Figure\Figure.csproj">
+      <Project>{0b2e2a7c-b2ff-4d5f-a12a-648bd8463570}</Project>
+      <Name>Figure</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Politiche\Politiche.csproj">
+      <Project>{04bf784d-44d8-402b-8560-5b9c17dc65f6}</Project>
+      <Name>Politiche</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
